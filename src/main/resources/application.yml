@@ -1,0 +1,15 @@
+logging:
+  level:
+    org.springframework: false
+    org.hibernate: fatal
+spring:
+  datasource:
+    url: jdbc:h2:file:./db/test;DB_CLOSE_ON_EXIT=FALSE
+    dbcp2:
+      driver-class-name: org.h2.Driver
+  data:
+    rest:
+      base-path: /api
+  jpa:
+    hibernate:
+      ddl-auto: update

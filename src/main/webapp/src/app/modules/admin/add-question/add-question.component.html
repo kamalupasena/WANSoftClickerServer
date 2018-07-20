@@ -1,0 +1,50 @@
+<div fxLayout="row">
+  <div fxFlex="25%">
+
+
+  </div>
+  <div fxFlex>
+    <form [formGroup]="questionAddFormGroup" (submit)="onSubmit()">
+
+      <mat-radio-group class="example-radio-group" formControlName="rightAnswer">
+        <mat-form-field class="full-width">
+          <input matInput formControlName="question" placeholder="Question" autofocus>
+          <!-- <mat-error *ngIf="questionAddFormGroup.controlers['question'].hasError('required')">
+          Required
+        </mat-error> -->
+        </mat-form-field>
+
+        <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="2vw">
+          <mat-form-field class="full-width">
+            <input matInput formControlName="answer1" placeholder="First Answer">
+          </mat-form-field>
+          <mat-radio-button value="answer1"> </mat-radio-button>
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="2vw">
+          <mat-form-field class="full-width">
+            <input matInput formControlName="answer2" placeholder="Second Answer">
+          </mat-form-field>
+          <mat-radio-button value="answer2"> </mat-radio-button>
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="2vw">
+          <mat-form-field class="full-width">
+            <input matInput formControlName="answer3" placeholder="Third Answer">
+          </mat-form-field>
+          <mat-radio-button value="answer3"> </mat-radio-button>
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="2vw">
+          <mat-form-field class="full-width">
+            <input matInput formControlName="answer4" placeholder="Forth Answer">
+          </mat-form-field>
+          <mat-radio-button value="answer4"> </mat-radio-button>
+        </div>
+
+      </mat-radio-group>
+      <button type="submit" mat-raised-button>Add</button>
+    </form>
+  </div>
+  <div fxFlex="25%"></div>
+</div>

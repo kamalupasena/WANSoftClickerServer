@@ -1,0 +1,23 @@
+<mat-drawer-container class="example-container">
+  <mat-drawer #drawer opened="false" mode="side">
+    <mat-nav-list>
+      <mat-list-item *ngFor="let link of ['Home','Stats']">
+        <a matLine>{{ link }}</a>
+        <!-- <button mat-icon-button (click)="showInfo(link)">
+          <mat-icon>info</mat-icon>
+        </button> -->
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <mat-toolbar color="primary">
+
+      <!-- <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button> -->
+      Answer Me
+    </mat-toolbar>
+    <div style="padding: 1vh 1vw 1vh 1vw">
+      <router-outlet></router-outlet>
+    </div>
+
+  </mat-drawer-content>
+</mat-drawer-container>
